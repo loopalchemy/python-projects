@@ -1,4 +1,19 @@
+import os
+
+TASKS_FILE = "tasks.txt"
 tasks = []
+
+# Load tasks from file if it exists
+if os.path.exists(TASKS_FILE):
+    with open(TASKS_FILE, "r") as f:
+        for line in f:
+            task_text, completed = line.strip().split("||")
+            tasks.append({"task": task_text, "completed": completed == "True"})
+
+def save_tasks():
+    with open(TASKS_FILE, "w") as f:
+        for task in tasks:
+            f.write(f"{task['task']}||{task['completed']}\n")
 
 def show_menu():
     print("\nTo-Do List Menu")
@@ -10,6 +25,7 @@ def show_menu():
 def add_task():
     task = input("Enter a new task: ")
     tasks.append({"task": task, "completed": False})
+    save_tasks()
     print("Task added successfully.")
 
 def view_tasks():
@@ -26,6 +42,7 @@ def complete_task():
     try:
         task_number = int(input("Enter task number to mark as completed: "))
         tasks[task_number - 1]["completed"] = True
+        save_tasks()
         print("Task marked as completed.")
     except (IndexError, ValueError):
         print("Invalid task number.")
@@ -45,3 +62,5 @@ while True:
         break
     else:
         print("Invalid choice. Please try again.")
+
+       
