@@ -1,4 +1,6 @@
 # python-projects
+4. Guess the Number Game – Python CLI game using loops, conditionals, and random numbers
+
 A collection of Python projects showcasing Object-Oriented Programming, algorithm practice, and problem-solving skills.
 ## Projects Included
 1. Calculator App – basic arithmetic operations
