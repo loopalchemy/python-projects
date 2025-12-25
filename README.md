@@ -1,4 +1,5 @@
 # python-projects
+5. Password Generator – Generates secure passwords using Python random and string modules
 4. Guess the Number Game – Python CLI game using loops, conditionals, and random numbers
 
 A collection of Python projects showcasing Object-Oriented Programming, algorithm practice, and problem-solving skills.
