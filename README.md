@@ -1,5 +1,5 @@
 # python-projects
-6. To-Do List CLI – Command-line task manager with add, view, and complete features
+6.To-Do List CLI – Command-line task manager with persistent file storage
 5.Password Generator – Generates passwords with selectable strength levels (weak, medium, strong) 
 4. Guess the Number Game – Python CLI game using loops, conditionals, and random numbers
 
